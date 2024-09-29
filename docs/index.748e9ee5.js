@@ -30,7 +30,9 @@ let e=["https://api.nytimes.com/svc/topstories/v2/home.json?api-key=I3SCMGvGeTN6
                         </div>
                     </a>
                 </div>
-                <img src="${s}" alt="">
+                <a href="${o[e].url}" target="_blank">
+                    <img src="${s}" alt="">
+                </a>
             </div>
 
         `}},l=(e,t,s,a,i)=>{let o=n(e),r=document.getElementById(t);r.innerHTML="",document.getElementById(s).innerText=e.section;for(let e=a;e<=i;e++){let t=o[e].multimedia||["./assets/image/IMG-Header-Page-0001.jpg"],s=t&&t.length>0?t[0].url:"./assets/image/IMG-Header-Page-0001.jpg";r.innerHTML+=`
@@ -42,4 +44,4 @@ let e=["https://api.nytimes.com/svc/topstories/v2/home.json?api-key=I3SCMGvGeTN6
                     <img id="read-more" src="./assets/navigation-icons/Arrow 3.png" alt="">
                 </div>
             </a>`}},c=e=>{let t=e.homePageData,s=e.artsPageData,a=e.sportsPageData,i=e.worldPageData,n=document.getElementById("home-button"),o=document.getElementById("arts-button"),c=document.getElementById("sports-button"),m=document.getElementById("world-button");n.addEventListener("click",()=>{r(t),d(t,"top-stories1",4,7),l(a,"sports-stories","signage1",0,2),l(s,"art-stories","signage2",0,2),d(t,"top-stories2",8,11)}),o.addEventListener("click",()=>{r(s),d(s,"top-stories1",4,7),l(t,"sports-stories","signage1",0,2),l(i,"art-stories","signage2",0,2),d(s,"top-stories2",8,11)}),c.addEventListener("click",()=>{r(a),d(a,"top-stories1",4,7),l(s,"sports-stories","signage1",0,2),l(t,"art-stories","signage2",0,2),d(a,"top-stories2",8,9)}),m.addEventListener("click",()=>{r(i),d(i,"top-stories1",4,7),l(a,"sports-stories","signage1",0,2),l(t,"art-stories","signage2",0,2),d(i,"top-stories2",8,11)})};(async()=>{let e=await t();console.log(e);let a=e.homePageData,n=e.artsPageData,o=e.sportsPageData;i(a),r(a),d(a,"top-stories1",4,7),s(),l(o,"sports-stories","signage1",0,2),l(n,"art-stories","signage2",0,2),d(a,"top-stories2",8,11),c(e)})();
-//# sourceMappingURL=index.0a9eded0.js.map
+//# sourceMappingURL=index.748e9ee5.js.map
